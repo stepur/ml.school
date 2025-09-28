@@ -24,7 +24,7 @@ Resources:
   RemoteEC2Instance:
     Type: AWS::EC2::Instance
     Properties:
-      InstanceType: t2.micro
+      InstanceType: t3.micro
       ImageId: 
         !Sub "{{resolve:ssm:/aws/service/canonical/ubuntu/server/24.04/stable/20250115/amd64/hvm/ebs-gp3/ami-id}}"
       SecurityGroupIds: 
