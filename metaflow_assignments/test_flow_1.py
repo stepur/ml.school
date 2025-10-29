@@ -25,6 +25,14 @@ class TestFlow1(FlowSpec):
         print("Step Multiplication")
         self.variable *= 2
         self.variable_list.append(self.variable)
+        self.next(self.step_division)
+        
+    @step
+    def step_division(self):
+        """Divides the variable by a number"""
+        print("Step Division")
+        self.variable /= 4
+        self.variable_list.append(self.variable)
         self.next(self.end)
 
     @step
